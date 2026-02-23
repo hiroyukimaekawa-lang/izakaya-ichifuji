@@ -11,13 +11,33 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="loading-screen" aria-live="polite" aria-label="読み込み中">
+      <div class="loading-inner">
+        <p class="loading-title">居酒屋 壱ふじ</p>
+        <div class="loading-spinner" aria-hidden="true"></div>
+        <p class="loading-text">Loading...</p>
+      </div>
+    </div>
+
     <header class="hero" id="top">
       <div class="hero-overlay"></div>
-      <img
-        src="img/hero-main.png"
-        alt="居酒屋 壱ふじの串焼きと刺身"
-        class="hero-image"
-      />
+      <div class="hero-carousel" aria-label="店舗写真カルーセル">
+        <img
+          src="img/hero-main.png"
+          alt="居酒屋 壱ふじの串焼きと刺身"
+          class="hero-image is-active"
+        />
+        <img
+          src="img/storefront-night.jpg"
+          alt="居酒屋 壱ふじの店舗外観"
+          class="hero-image"
+        />
+        <img
+          src="img/gallery-table-seats.jpg"
+          alt="居酒屋 壱ふじの店内テーブル席"
+          class="hero-image"
+        />
+      </div>
       <div class="hero-content">
         <p class="eyebrow">HIRATSUKA YAKITORI</p>
         <h1>居酒屋 壱ふじ</h1>
@@ -31,16 +51,52 @@
     </header>
 
     <main>
-      <section class="section intro">
-        <h2>コンセプト</h2>
-        <p>
-          当店の看板は、一本一本丁寧に焼き上げる串焼きと、素材の旨みを最大限に引き出した牛肉料理。
-          特に串焼きは「平塚で一番美味しい」という嬉しいお声をいただくことも多く、遠方から足を運んでくださる方もいらっしゃいます。
-        </p>
-        <p>
-          まだお店を知らない方も多いですが、一度食べていただければ、その違いを実感していただける自信があります。
-          初来店をきっかけにリピートしてくださるお客様が続出し、「また来たい」「次はこれを食べたい」と言っていただけることが、私たちの誇りです。
-        </p>
+      <section class="section intro" id="concept">
+        <div class="concept-head">
+          <h2>コンセプト</h2>
+          <div class="concept-divider"></div>
+          <p class="concept-en">Concept</p>
+        </div>
+
+        <div class="concept-copy concept-copy-pc">
+          <h3 class="concept-title-tight">【一本一本丁寧に焼き上げる串焼き】</h3>
+          <p>
+            当店の看板は、一本一本丁寧に焼き上げる串焼きと、<br>素材の旨みを最大限に引き出した牛肉料理。<br />
+            特に串焼きは「平塚で一番美味しい」という<br>嬉しいお声をいただくことも多く、<br />
+            遠方から足を運んでくださる方もいらっしゃいます。
+          </p>
+
+          <h3>【また来たいと思える一軒へ】</h3>
+          <p>
+            まだお店を知らない方も多いですが、<br>一度食べていただければその違いを<br>実感していただける自信があります。<br />
+            初来店をきっかけにリピートしてくださるお客様が続出し、<br />
+            「また来たい」「次はこれを食べたい」と<br>言っていただけることが、私たちの何よりの誇りです。
+          </p>
+        </div>
+
+        <div class="concept-copy concept-copy-sp">
+          <h3 class="concept-title-tight">【一本一本丁寧に焼き上げる串焼き】</h3>
+          <p>
+            当店の看板は、一本一本<br>丁寧に焼き上げる串焼きと<br />
+            素材の旨みを最大限に<br>引き出した牛肉料理<br /><br>
+            串焼きは「平塚で一番美味しい」との<br>お声をいただくことも多く<br />
+            遠方から通ってくださる<br>お客様もいらっしゃいます
+          </p>
+
+          <h3>【また来たいと思える一軒へ】</h3>
+          <p>
+            一度食べていただければ違いを<br>実感していただける自信があります<br />
+            初来店をきっかけにリピート<br>してくださるお客様も多く<br />
+            「また来たい」「次はこれを食べたい」<br>の声が私たちの誇りです
+          </p>
+        </div>
+
+        <div class="concept-video-wrap">
+          <video class="concept-video" controls preload="metadata" playsinline>
+            <source src="img/line_oa_chat_260203_152617.mp4" type="video/mp4" />
+            お使いのブラウザは動画再生に対応していません。
+          </video>
+        </div>
       </section>
 
       <section class="section menu" id="menu">
@@ -81,34 +137,22 @@
 
       <section class="section gallery">
         <h2>店内の雰囲気</h2>
-        <div class="gallery-grid">
-          <img src="img/gallery-table-seats.jpg" alt="店内テーブル席" />
-          <img src="img/gallery-counter-area.jpg" alt="店内の様子" />
-          <img src="img/gallery-zashiki-seats.jpg" alt="座敷席" />
-          <img src="img/storefront-night.jpg" alt="店舗外観" />
+        <div class="gallery-carousel" aria-label="店内写真スライドショー">
+          <img src="img/gallery-table-seats.jpg" alt="店内テーブル席" class="gallery-slide is-active" />
+          <img src="img/gallery-counter-area.jpg" alt="店内の様子" class="gallery-slide" />
+          <img src="img/gallery-zashiki-seats.jpg" alt="座敷席" class="gallery-slide" />
+          <img src="img/storefront-night.jpg" alt="店舗外観" class="gallery-slide" />
         </div>
       </section>
 
       <section class="section info" id="info">
         <h2>店舗情報</h2>
-        <div class="info-grid">
-          <div class="info-item">
-            <h3>正式名称</h3>
-            <p>居酒屋 壱ふじ</p>
-          </div>
-          <div class="info-item">
-            <h3>所在地</h3>
-            <p>〒254-0018 神奈川県平塚市東真土3丁目2-27</p>
-          </div>
-          <div class="info-item">
-            <h3>電話番号</h3>
-            <p><a href="tel:0463599770">0463-59-9770</a></p>
-          </div>
-          <div class="info-item">
-            <h3>アクセス</h3>
-            <p>平塚駅からバスで約10分 / 最寄り「大野農協前」</p>
-          </div>
-        </div>
+        <dl class="info-list">
+          <div><dt>店舗名</dt><dd>居酒屋 壱ふじ</dd></div>
+          <div><dt>所在地</dt><dd>〒254-0018 神奈川県平塚市東真土3丁目2-27</dd></div>
+          <div><dt>電話番号</dt><dd><a href="tel:0463599770">0463-59-9770</a></dd></div>
+          <div><dt>アクセス</dt><dd>平塚駅からバスで約10分 / 最寄り「大野農協前」</dd></div>
+        </dl>
       </section>
 
       <section class="section hours" id="hours">
@@ -126,6 +170,7 @@
 
       <section class="section access" id="access">
         <h2>アクセスマップ</h2>
+        <p class="access-note">アクセス: 平塚駅からバスで約10分 / 最寄り「大野農協前」</p>
         <div class="map-wrap">
           <iframe
             title="居酒屋 壱ふじ 地図"
@@ -140,7 +185,10 @@
 
     <footer class="footer">
       <h2>ご予約・お問い合わせ</h2>
-      <p>お電話またはInstagramのDMからお気軽にご連絡ください。</p>
+      <p>
+        当店はInstagramをメインで運用しています。最新情報はInstagramでご確認ください。
+        ご連絡はお電話またはInstagramのDMからお気軽にどうぞ。
+      </p>
       <div class="footer-links">
         <a class="cta" href="tel:0463599770">0463-59-9770</a>
         <a
@@ -153,5 +201,55 @@
       </div>
       <p class="copyright">© 居酒屋 壱ふじ</p>
     </footer>
+
+    <a
+      class="floating-instagram"
+      href="https://www.instagram.com/izakaya.ichifuji/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagramを開く"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95Zm8.98 1.52a1.23 1.23 0 1 1 0 2.46 1.23 1.23 0 0 1 0-2.46ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4Z"
+        />
+      </svg>
+      <span>Instagram</span>
+    </a>
+
+    <script>
+      (function () {
+        const slides = document.querySelectorAll(".hero-carousel .hero-image");
+        if (!slides.length) return;
+        let index = 0;
+        setInterval(() => {
+          slides[index].classList.remove("is-active");
+          index = (index + 1) % slides.length;
+          slides[index].classList.add("is-active");
+        }, 4500);
+      })();
+
+      (function () {
+        const slides = document.querySelectorAll(".gallery-carousel .gallery-slide");
+        if (!slides.length) return;
+        let index = 0;
+        setInterval(() => {
+          slides[index].classList.remove("is-active");
+          index = (index + 1) % slides.length;
+          slides[index].classList.add("is-active");
+        }, 3600);
+      })();
+
+      (function () {
+        const loader = document.getElementById("loading-screen");
+        if (!loader) return;
+        window.addEventListener("load", function () {
+          loader.classList.add("is-loaded");
+          setTimeout(function () {
+            loader.remove();
+          }, 650);
+        });
+      })();
+    </script>
   </body>
 </html>
