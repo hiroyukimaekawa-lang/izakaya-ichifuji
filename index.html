@@ -51,7 +51,7 @@
     </header>
 
     <main>
-      <section class="section intro" id="concept">
+      <section class="section intro reveal" id="concept">
         <div class="concept-head">
           <h2>コンセプト</h2>
           <div class="concept-divider"></div>
@@ -99,7 +99,7 @@
         </div>
       </section>
 
-      <section class="section menu" id="menu">
+      <section class="section menu reveal" id="menu">
         <h2>おすすめ</h2>
         <div class="menu-grid">
           <article class="card">
@@ -135,7 +135,7 @@
         </div>
       </section>
 
-      <section class="section gallery">
+      <section class="section gallery reveal">
         <h2>店内の雰囲気</h2>
         <div class="gallery-carousel" aria-label="店内写真スライドショー">
           <img src="img/gallery-table-seats.jpg" alt="店内テーブル席" class="gallery-slide is-active" />
@@ -145,7 +145,7 @@
         </div>
       </section>
 
-      <section class="section info" id="info">
+      <section class="section info reveal" id="info">
         <h2>店舗情報</h2>
         <dl class="info-list">
           <div><dt>店舗名</dt><dd>居酒屋 壱ふじ</dd></div>
@@ -155,7 +155,7 @@
         </dl>
       </section>
 
-      <section class="section hours" id="hours">
+      <section class="section hours reveal" id="hours">
         <h2>営業時間</h2>
         <dl class="hours-list">
           <div><dt>月曜日</dt><dd>定休日</dd></div>
@@ -168,7 +168,7 @@
         </dl>
       </section>
 
-      <section class="section access" id="access">
+      <section class="section access reveal" id="access">
         <h2>アクセスマップ</h2>
         <p class="access-note">アクセス: 平塚駅からバスで約10分 / 最寄り「大野農協前」</p>
         <div class="map-wrap">
@@ -249,6 +249,26 @@
             loader.remove();
           }, 650);
         });
+      })();
+
+      (function () {
+        const reveals = document.querySelectorAll(".reveal");
+        if (!("IntersectionObserver" in window)) {
+          reveals.forEach((el) => el.classList.add("visible"));
+          return;
+        }
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.25 }
+        );
+        reveals.forEach((el) => observer.observe(el));
       })();
     </script>
   </body>
