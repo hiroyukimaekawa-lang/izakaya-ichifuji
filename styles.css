@@ -220,6 +220,14 @@ h2 {
   font-weight: 600;
 }
 
+.concept-title-tight {
+  color: #FFA400;
+}
+
+.concept-title-sub {
+  color: #FFA400;
+}
+
 .concept-copy p {
   margin: 1.8rem 0 0;
   color: #efe8de;
@@ -470,6 +478,7 @@ h2 {
     font-size: clamp(1.25rem, 3vw, 1.45rem) !important;
     letter-spacing: 0.03em;
     white-space: nowrap;
+    color: #FFA400;
   }
 }
 
@@ -518,5 +527,6 @@ h2 {
     font-size: clamp(1.25rem, 3.2vw, 1.45rem) !important;
     letter-spacing: 0.03em;
     white-space: nowrap;
+    color: #FFA400;
   }
 }
