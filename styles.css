@@ -311,6 +311,29 @@ h2 {
   opacity: 1;
 }
 
+.menu-link-wrap {
+  text-align: center;
+  margin: 0 auto 1.8rem;
+}
+
+.menu-link {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  background: linear-gradient(160deg, #a53b2a 0%, #7a2215 100%);
+  color: #fff6ee;
+  text-decoration: none;
+  border-radius: 2px;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  border: 1px solid rgba(255, 246, 238, 0.25);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.menu-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
 .info-list {
   width: min(100%, 900px);
   margin: 0 auto;
